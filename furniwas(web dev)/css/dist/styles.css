@@ -1,0 +1,509 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;600&display=swap");
+* {
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: .2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #130f40;
+  border-radius: 5rem;
+}
+
+section {
+  padding: 5rem 9%;
+}
+
+.heading {
+  font-size: 4rem;
+  padding: 2rem;
+  text-align: center;
+  color: #130f40;
+}
+
+.heading span {
+  color: #e67e22;
+}
+
+.btn {
+  color: #130f40;
+  font-size: 1.7rem;
+  overflow: hidden;
+  z-index: 0;
+  position: relative;
+  background: none;
+  cursor: pointer;
+  border: 0.2rem solid #130f40;
+  display: inline-block;
+  margin-top: 1rem;
+  padding: .8rem 2.8rem;
+}
+
+.btn:hover {
+  color: #ffffff;
+  background-color: #e67e22;
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: translateY(4rem);
+    opacity: 0;
+  }
+}
+
+.header {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 9%;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transform: translateY(-10rem);
+}
+
+.header.active {
+  transform: translateY(0rem);
+}
+
+.header .logo {
+  font-size: 2.5rem;
+  color: #130f40;
+  font-weight: bolder;
+}
+
+.header .logo i {
+  color: #e67e22;
+}
+
+.header .navbar a {
+  margin: 0 1rem;
+  font-size: 1.7rem;
+  color: #666;
+}
+
+.header .navbar a:hover {
+  color: #e67e22;
+}
+
+.header .icons a,
+.header .icons div {
+  font-size: 2.5rem;
+  margin-left: 1.5rem;
+  color: #130f40;
+  cursor: pointer;
+}
+
+.header .icons a:hover,
+.header .icons div:hover {
+  color: #e67e22;
+}
+
+.header .login-form {
+  position: absolute;
+  top: 120%;
+  right: 2rem;
+  width: 35rem;
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  display: none;
+}
+
+.header .login-form.active {
+  display: block;
+  animation: fadeIn .4s linear;
+}
+
+.header .login-form h3 {
+  color: #130f40;
+  font-size: 3rem;
+  padding-bottom: .5rem;
+}
+
+.header .login-form .box {
+  width: 100%;
+  border-bottom: 0.2rem solid #130f40;
+  border-width: .1rem;
+  padding: 1.5rem 0;
+  font-size: 1.6rem;
+  color: #130f40;
+  text-transform: none;
+  margin: 1rem 0;
+}
+
+.header .login-form .remember {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  padding: 1rem 0;
+}
+
+.header .login-form .remember label {
+  font-size: 1.5rem;
+  color: #666;
+  cursor: pointer;
+}
+
+.header .login-form .btn {
+  width: 100%;
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.header .login-form .btn:hover {
+  background: #130f40;
+}
+
+.header .login-form .links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.header .login-form .links a {
+  font-size: 1.4rem;
+  color: #e67e22;
+}
+
+.header .login-form .links a:hover {
+  color: #130f40;
+  text-decoration: underline;
+}
+
+#menu-btn {
+  display: none;
+}
+
+.home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background: url(../images/nightlife.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.home .content {
+  width: 50rem;
+}
+
+.home .content h3 {
+  font-size: 6rem;
+  color: #fff;
+  padding-bottom: 1rem;
+}
+
+.home .content h3 span {
+  color: #e67e22;
+}
+
+.home .content .btn {
+  color: #fff;
+  border-color: #fff;
+}
+
+.home .content .btn:hover {
+  color: #130f40;
+}
+
+.home .content .btn::before {
+  background: #fff;
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.about .image {
+  flex: 1 1 40rem;
+}
+
+.about .image img {
+  width: 50%;
+}
+
+.about .content {
+  flex: 1 1 40rem;
+}
+
+.about .content h3 {
+  color: #130f40;
+  font-size: 4rem;
+}
+
+.about .content h3 span {
+  color: #e67e22;
+}
+
+.about .content p {
+  color: #666;
+  font-size: 1.6rem;
+  padding: 1rem 0;
+  line-height: 2rem;
+}
+
+.dog-food,
+.cat-food {
+  display: flex;
+  padding: 2rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.dog-food .image,
+.cat-food .image {
+  flex: 1 1 40rem;
+}
+
+.dog-food .image img,
+.cat-food .image img {
+  width: 100%;
+}
+
+.dog-food .content,
+.cat-food .content {
+  flex: 1 1 40rem;
+  text-align: center;
+  padding: 3rem;
+}
+
+.dog-food .content h3,
+.cat-food .content h3 {
+  color: #130f40;
+  font-size: 3.5rem;
+}
+
+.dog-food .content h3 span,
+.cat-food .content h3 span {
+  color: #e67e22;
+}
+
+.dog-food .content p,
+.cat-food .content p {
+  font-size: 1.6rem;
+  color: #666;
+  padding: 1rem 0;
+  line-height: 2;
+}
+
+.dog-food .content .amount,
+.cat-food .content .amount {
+  font-size: 5rem;
+  color: #130f40;
+  padding: 1rem 0;
+  line-height: 2;
+}
+
+.shop .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+
+.shop .box-container .box {
+  position: relative;
+  overflow: hidden;
+}
+
+.shop .box-container .box:hover {
+  transform: scale(1.1);
+}
+
+.shop .box-container .box .image {
+  height: 38rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.shop .box-container .box .img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.shop .box-container .box .icon {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  z-index: 10;
+}
+
+.shop .box-container .box .icon a {
+  display: block;
+  width: 5rem;
+  height: 5rem;
+  line-height: 2rem;
+  font-size: 2.2rem;
+  margin-top: 1rem;
+  color: #130f40;
+  text-align: center;
+}
+
+.shop .box-container .box .icon a:hover {
+  color: #e67e22;
+}
+
+.shop .box-container .box .content {
+  padding: 1rem 0;
+  text-align: left;
+}
+
+.shop .box-container .box .content h3 {
+  color: #130f40;
+  font-size: 2.2rem;
+}
+
+.shop .box-container .box .content .amount {
+  font-size: 2.2rem;
+  color: #e67e22;
+}
+
+.services .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+
+.services .box-container .box {
+  background: #eee;
+  padding: 3rem;
+  text-align: center;
+}
+
+.services .box-container .box i {
+  height: 6.5rem;
+  width: 6.5rem;
+  line-height: 6.5rem;
+  color: #e67e22;
+  font-size: 3.2rem;
+  margin-bottom: .5rem;
+}
+
+.services .box-container .box h3 {
+  color: #130f40;
+  font-size: 2.5rem;
+  padding: 1rem 0;
+}
+
+.contact {
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.contact .image {
+  flex: 1 1 40rem;
+}
+
+.contact .image img {
+  width: 100%;
+}
+
+.contact form {
+  flex: 1 1 40rem;
+  padding: 2rem 7%;
+}
+
+.contact form h3 {
+  font-size: 3rem;
+  padding-bottom: 1rem;
+  color: #130f40;
+}
+
+.contact form .box {
+  width: 100%;
+  border-bottom: 0.2rem solid #130f40;
+  border-width: .2rem;
+  font-size: 1.7rem;
+  color: #130f40;
+  padding: 1.5rem 0;
+  margin: 1rem 0;
+}
+
+.contact form .textarea {
+  height: 15rem;
+}
+
+.footer {
+  background-color: gray;
+  color: #fff;
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  .header {
+    padding: 2rem;
+  }
+  section {
+    padding: 5rem 2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+  .header .login-form {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  #menu-btn {
+    display: inline-block;
+  }
+  .header .navbar {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  .header .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  .header .navbar a {
+    display: block;
+    margin: 2rem;
+    font-size: 2rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
